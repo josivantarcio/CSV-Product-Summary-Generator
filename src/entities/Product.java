@@ -45,7 +45,7 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return name + "," + total();
+		return name + "," + String.format("%.2f%n", total());
 	}
 
 }

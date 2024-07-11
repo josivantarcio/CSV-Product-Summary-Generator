@@ -5,6 +5,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.Locale;
 
 import entities.Product;
 
@@ -12,6 +13,7 @@ public class Aplication {
 
 	public static void main(String[] args) {
 
+		Locale.setDefault(Locale.US);
 		String path = "/home/josivan/Downloads/tmp/itens.csv";
 		String newPath = "/home/josivan/Downloads/tmp/out";
 
@@ -19,7 +21,7 @@ public class Aplication {
 		if (newPast) {
 			System.out.println("Pasta criada com Sucesso!");
 		} else {
-			System.out.println("Problema na criação da Pasta.");
+			System.out.println("Problema na criação da Pasta ou ela já existe.");
 		}
 
 		String newFile = "Summary.csv";
@@ -40,7 +42,6 @@ public class Aplication {
 				Product product = new Product(nome, valor, quantidade);
 
 				bw.write(product.toString());
-				bw.newLine();
 
 				linha = br.readLine();
 			}

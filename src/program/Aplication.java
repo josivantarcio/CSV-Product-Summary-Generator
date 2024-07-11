@@ -13,7 +13,6 @@ public class Aplication {
 	public static void main(String[] args) {
 
 		String path = "/home/josivan/Downloads/tmp/itens.csv";
-
 		String newPath = "/home/josivan/Downloads/tmp/out";
 
 		boolean newPast = new File(newPath).mkdir();

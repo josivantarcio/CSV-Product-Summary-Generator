@@ -1,0 +1,15 @@
+# Eclipse specific files
+.classpath
+.project
+.settings/
+
+# MacOS specific files
+.DS_Store
+
+# Java specific files
+target/
+*.class
+*.jar
+
+# Binary files
+*.bin

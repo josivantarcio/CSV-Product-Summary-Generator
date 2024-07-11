@@ -38,22 +38,18 @@ public class Aplication {
 				Integer quantidade = Integer.valueOf(linhas[2]);
 
 				Product product = new Product(nome, valor, quantidade);
-				
 
 				bw.write(product.toString());
 				bw.newLine();
-				
+
 				linha = br.readLine();
 			}
-			
-			
 
 		} catch (Exception e) {
 			System.err.println("ERROR: " + e.getMessage());
+		} finally {
+			System.out.println("Fim");
 		}
-		 finally {
-			 System.out.println("Fim");
-		 }
-		
+
 	}
 }
